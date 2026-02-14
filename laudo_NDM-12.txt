@@ -1,0 +1,6 @@
+--- RELATÓRIO DE BIOINFORMÁTICA ---
+Data da análise: 03/02/2026 14:57:31
+Gene Alvo: NDM-12
+Resultado: POSITIVO
+Detalhe: gb|BAO79439.1|ARO:3002362|NDM-12 [Escherichia coli]
+------------------------------------

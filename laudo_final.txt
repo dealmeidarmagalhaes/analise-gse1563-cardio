@@ -1,0 +1,5 @@
+RELATÓRIO DE VIGILÂNCIA GENÔMICA
+Data: 31/01/2026 14:27:23
+Responsável: Ricardo
+Resultado: POSITIVO para gb|CAZ39946.1|ARO:3000589|NDM-1 [Klebsiella pneumoniae]
+Status: Alerta de resistência detectado.

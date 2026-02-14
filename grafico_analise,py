@@ -1,0 +1,33 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#objetivo de criar uma visualização em grafico, matplotlib e seaborn sao bibliotecas muito boas para criar campos visuais em python
+df = pd.read_csv("genes_candidatos.csv")
+
+
+top_up = df.head(5)
+top_down = df.tail(5)
+plot_data = pd.concat([top_up, top_down])
+
+plt.figure(figsize=(12, 6))
+sns.set_theme(style="whitegrid")
+
+# Criar o gráfico de barras, comparando os top 5 mais ativads e 5 menos ativados
+grafico = sns.barplot(
+    x='LFC', 
+    y='Gene Symbol', 
+    data=plot_data, 
+    palette='vlag' # Cores: azul para negativo, vermelho para positivo
+)
+plt.title('Top 10 Genes com Maior Alteração de Expressão (LFC)', fontsize=15)
+plt.xlabel('Log2 Fold Change (LFC)', fontsize=12)
+plt.ylabel('Gene Symbol', fontsize=12)
+
+plt.axvline(0, color='black', lw=1)
+
+
+plt.tight_layout()
+plt.savefig('resultado_genes.png', dpi=300)
+print("✅ Gráfico gerado com sucesso: 'resultado_genes.png'")
+
